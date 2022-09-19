@@ -1,20 +1,21 @@
 #include "main.h"
 
 /**
- * puts2 - this function prints every other string
- * @str: a useless pointer
- *
- * Return: nothing.
+ * puts2 - prints every other character of a string.
+ *@str: the string to use.
  */
 
 void puts2(char *str)
 {
+	int i = 0;
 
-	int i;
-
-	for (i = 0; str[i] != '\0'; i += 2)
+	while (str[i] != '\0')
 	{
-		_putchar(str[i]);
+		if (i % 2 == 0)
+		{
+			_putchar(str[i]);
+		}
+		i++;
 	}
 	_putchar('\n');
 }
